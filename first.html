@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img1{
+            width: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 0;
+        }
+        .img2{
+            width: 200px;
+            position: absolute;
+            left: 50px;
+            top: 110px;
+            z-index: 0;
+        }
+        .img3{
+            width: 200px;
+            position: absolute;
+            left: 100px;
+            top: 220px;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyzpztEZ2ykCnjQGcdYsKIMaj4Skvv_w9PPQ&s" class="img1" id="first" onmouseover="toTop('first')">
+        <img src=" https://www.shutterstock.com/image-photo/high-rise-buildings-office-area-260nw-2474260777.jpg" class="img2" id="second" onmouseover="toTop('second')">
+        <img src=" https://img.freepik.com/free-photo/observation-urban-building-business-steel_1127-2397.jpg" class="img3" id="third" onmouseover="toTop('third')">
+    </p>
+    <script>
+        let oldtop = "first";
+        function toTop(newtop){
+            DomTop = document.getElementById(oldtop).style;
+            DomNew = document.getElementById(newtop).style;
+            DomTop.zIndex = "0";
+            DomNew.zIndex = "10";
+            oldtop = newtop;
+        }
+    </script>
+</body>
+</html>
